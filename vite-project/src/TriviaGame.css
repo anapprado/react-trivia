@@ -1,0 +1,39 @@
+/* TriviaGame.css */
+.trivia-game {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    text-align: center;
+}
+
+.question-card {
+    margin-bottom: 20px;
+}
+
+.question {
+    font-weight: bold;
+}
+
+.answer {
+    cursor: pointer;
+    user-select: none;
+    transition: filter 0.3s;
+    filter: blur(5px);
+    margin-top: 5px;
+}
+
+.answer.visible {
+    filter: blur(0);
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.score-section {
+    margin-top: 20px;
+    font-size: 20px;
+}
