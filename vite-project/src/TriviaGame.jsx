@@ -43,7 +43,7 @@ const TriviaGame = () => {
         if (nextQuestionIndex < triviaQuestions.length) {
             setCurrentQuestionIndex(nextQuestionIndex);
         } else {
-            alert(`Game Over! Your score is ${score}/${triviaQuestions.length}`);
+            alert(`Game Over! Your score is ${score + 1}/${triviaQuestions.length}`);
             setCurrentQuestionIndex(0);
             setScore(0);
         }
@@ -56,6 +56,13 @@ const TriviaGame = () => {
         }
     };
 
+    const resetGame = () => {
+        setCurrentQuestionIndex(0);
+        setScore(0);
+        // Reset any other state variables if necessary
+    };
+    
+
     return (
         <div className="trivia-game">
             <h1>Miscellaneous Food Trivia</h1>
@@ -66,6 +73,7 @@ const TriviaGame = () => {
             />
             <button onClick={previousQuestion} disabled={currentQuestionIndex === 0}>Previous</button>
             <button onClick={nextQuestion}>Next</button>
+            <button onClick={resetGame}>Reset</button>
             <div className="score-section">
                 Score: {score} {showEmoji && '🌟'}
             </div>

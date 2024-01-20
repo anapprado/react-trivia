@@ -6,7 +6,7 @@
     max-width: 300px;
     text-align: center;
     font-size: 15px;
-    background:black;
+    background:#090b0bc2;
     color: #fff;
     
 }
@@ -25,8 +25,8 @@
 .answer {
     cursor: help;
     user-select: none;
-    transition: filter 0.3s;
-    filter: blur(30px);
+    transition: filter 0.5s;
+    filter: blur(80px);
     margin-top: 0.8rem;
 }
 
