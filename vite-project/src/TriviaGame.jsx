@@ -1,3 +1,4 @@
+
 // TriviaGame.js
 import React, { useState } from 'react';
 import QuestionCard from './QuestionCard';
@@ -32,22 +33,27 @@ const TriviaGame = () => {
     const [showEmoji,setShowEmoji] = useState(false);
 
     const handleCorrectAnswer = () => {
-        setScore(score + 1);
+        // Increment the score immediately when the answer is correct
+        setScore((prevScore) => prevScore + 1);
         setShowEmoji(true);
         setTimeout(() => setShowEmoji(false), 1000);
         nextQuestion();
     };
+    
+    
 
     const nextQuestion = () => {
         const nextQuestionIndex = currentQuestionIndex + 1;
         if (nextQuestionIndex < triviaQuestions.length) {
             setCurrentQuestionIndex(nextQuestionIndex);
         } else {
-            alert(`Game Over! Your score is ${score + 1}/${triviaQuestions.length}`);
+            // Show the alert with the final score
+            alert(`Congrats! Your score is ${score}/${triviaQuestions.length}`);
             setCurrentQuestionIndex(0);
             setScore(0);
         }
     };
+    
 
     const previousQuestion = () => {
         const prevQuestionIndex = currentQuestionIndex - 1;
