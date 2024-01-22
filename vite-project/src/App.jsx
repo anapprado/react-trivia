@@ -6,7 +6,7 @@ import './TriviaGame.css';
 function App() {
   return (
     <div className="App">
-      <TriviaGame />
+      <TriviaGame /> 
     </div>
   );
 }
